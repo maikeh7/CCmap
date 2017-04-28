@@ -6,13 +6,6 @@ Daly1 = readOGR("data", "BigD")
 namesbigD = readLines("data/BigDnames.txt")
 names(Daly1@data) = namesbigD
 
-
-c("PSSP", "FEID", "NonNativeA", "NonNativeB",
-  "Native", "Bare Ground", "Perennial Grass",
-  "BRTE", "POBU", "Rock", "POSE", "Native Perennial Grass",
-  "Perennial Shrub", "Moss", "ONAC", "CIAR4", "TACA8",
-  "ELEL5", "CADR")
-
 shinyServer(
   function(input, output) {
     output$map <- renderPlot({
